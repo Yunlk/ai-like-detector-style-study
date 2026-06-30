@@ -161,4 +161,4 @@ This distinction matters because AI-polished human text can receive much lower A
 
 ## License
 
-MIT License
+Code in this repository is released under the MIT License. Datasets, generated texts, model outputs, figures, and other experiment artifacts are not included in this repository and remain subject to their original source licenses and platform terms.

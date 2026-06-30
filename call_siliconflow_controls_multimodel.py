@@ -51,14 +51,19 @@ def write_csv_atomic(path: Path, rows: list[dict[str, str]], fieldnames: list[st
     temp_path.replace(path)
 
 
-def make_key(row: dict[str, str]) -> tuple[str, str, str]:
-    return row.get("source_id", ""), row.get("prompt_type", ""), row.get("model", "")
+def make_key(row: dict[str, str]) -> tuple[str, str, str, str]:
+    return (
+        row.get("source_id", ""),
+        row.get("prompt_type", ""),
+        row.get("prompt_style", ""),
+        row.get("model", ""),
+    )
 
 
-def load_existing(path: Path) -> dict[tuple[str, str, str], dict[str, str]]:
+def load_existing(path: Path) -> dict[tuple[str, str, str, str], dict[str, str]]:
     if not path.exists():
         return {}
-    existing: dict[tuple[str, str, str], dict[str, str]] = {}
+    existing: dict[tuple[str, str, str, str], dict[str, str]] = {}
     for row in read_csv(path):
         if row.get("status") == "ok" and row.get("generated_text", "").strip():
             existing[make_key(row)] = row
