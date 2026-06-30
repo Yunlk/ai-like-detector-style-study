@@ -1,0 +1,51 @@
+# Secrets and local environment
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Data and generated artifacts
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.sqlite
+*.db
+*.joblib
+*.pkl
+tmp*
+
+# Large experiment result directories
+local_detector_results*/
+
+# Documents and manuscript scratch files
+*.docx
+*.pdf
+*.pptx
+*.xlsx
+
+# Images generated for local manuscript assembly
+*.png
+*.jpg
+*.jpeg
+
+# Keep repository documentation visible
+!README.md
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
