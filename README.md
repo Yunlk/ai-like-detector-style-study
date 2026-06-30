@@ -161,4 +161,4 @@ This distinction matters because AI-polished human text can receive much lower A
 
 ## License
 
-Add a license before public release. If unsure, use `MIT` for code and keep datasets out of the repository unless their source licenses permit redistribution.
+MIT License
